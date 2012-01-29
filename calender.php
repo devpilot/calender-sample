@@ -48,6 +48,9 @@
                 $('button#cal-next').click(function(){
                     loadCal('next', calNum);
                 });
+                $('button#cal-prev').click(function(){
+                    loadCal('prev', calNum);
+                });
             });
         </script>
         <link type="text/css" rel="stylesheet" href="style/calender.css" />

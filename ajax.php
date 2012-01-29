@@ -20,7 +20,12 @@ if($_GET['action'] == 'loadcal'){
             $year++;
         }
     } else {
-        // previous nav codes
+        if($month > 1){
+            $month--;
+        } else {
+            $month = 12;
+            $year--;
+        }
     }
 }
 
