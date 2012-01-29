@@ -13,9 +13,14 @@ if($_GET['action'] == 'loadcal'){
     $year = (int) $date[1];
     
     if($_GET['calnav'] == 'next'){
-        $month++;
+        if($month < 12){
+            $month++;
+        } else {
+            $month = 1;
+            $year++;
+        }
     } else {
-        
+        // previous nav codes
     }
 }
 
