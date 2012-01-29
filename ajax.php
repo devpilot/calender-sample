@@ -19,7 +19,7 @@ if($_GET['action'] == 'loadcal'){
             $month = 1;
             $year++;
         }
-    } else {
+    } else if($_GET['calnav'] == 'prev'){
         if($month > 1){
             $month--;
         } else {

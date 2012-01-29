@@ -6,7 +6,7 @@
 
         <script type="text/javascript" src="script/jquery-1.7.1.js"></script>
         <script type="text/javascript">
-            var calNum;
+            var calNum, calToday;
             
             /** 
              * Initialize interactive actions.
@@ -25,6 +25,13 @@
                     alert($(this).attr('foo'));
                     return false;
                 });
+                
+                // Today button state
+                if(calToday == calNum){
+                    $('button#cal-today').attr('disabled','');
+                } else {
+                    $('button#cal-today').removeAttr('disabled');
+                }
             };
             
             /**
@@ -37,6 +44,7 @@
                     $('.cal-menu span').text(data.title);
                     $('div#cal-struct').html(data.table);
                     calNum = data.numb;
+                    if(!calToday){calToday = calNum;}
                     initAct();
                 }, 'json');
             };
@@ -50,6 +58,9 @@
                 });
                 $('button#cal-prev').click(function(){
                     loadCal('prev', calNum);
+                });
+                $('button#cal-today').click(function(){
+                    loadCal('today', calToday);
                 });
             });
         </script>
