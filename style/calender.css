@@ -1,0 +1,93 @@
+/* Reset */
+* {
+	margin:0;
+	padding:0;
+}
+body{
+}
+table {
+	border-collapse:collapse;
+	background:#FFF;
+}
+td {
+	height:100px;
+	width:180px;
+	vertical-align:top;
+	border:1px solid #CCC;
+}
+td div.date {
+	width:25px;
+	text-align:center;
+	background:#363636;
+	color:#fff;
+        cursor: pointer;
+}
+td div.info {
+	height:16px;
+	margin:2px;
+	border:1px solid #FF0;
+	background:#FFC;
+	font-size:12px;
+	cursor:pointer;
+	color:#333;
+	overflow:hidden;
+}
+td.active:hover{
+	background:#ECFFFF;
+}
+td.blank{
+	background:url(../image/blank.png);
+}
+
+/* For popup dialog */
+.mask {
+	background-color: rgba(0, 0, 0, 0.3);
+	width:100%;
+	height:100%;
+	position:fixed;
+    display: none;
+}
+.dialog {
+	background:#fff;
+	height:300px;
+	width:500px;
+	margin: 10% auto;
+	-moz-border-radius:10px;
+	-moz-box-shadow: 2px 1px 5px 2px rgba(0, 0, 0, 0.3);
+}
+.close {
+	height:20px;
+	width:20px;
+	background:url(../image/close.png) no-repeat center;
+	position:relative;
+	left:490px;
+	top:-10px;
+	cursor:pointer;
+}
+#calender .cal-menu {
+	background:#06C;
+        padding: 6px;
+}
+#calender .cal-menu span{
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-left:50px;
+}
+#calender {
+	padding:5px;
+	background:#0C0;
+        width: 1200px;
+	margin:auto;
+}
+.events{
+    height: 80px;
+    overflow: hidden;
+}
+table #today {
+	background:#EDDEEA;
+}
+table #today .date{
+	background:#593150;
+	font-weight:bold;
+}
