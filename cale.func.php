@@ -9,7 +9,7 @@ function get_calender($month ='', $year='') {
     $date = time();
     $curr = array();
     $curr['day'] = date('d', $date);
-    $curr['month']= date('m', $date);
+    $curr['month']= date('n', $date);
     $curr['year'] = date('Y', $date);
     
     if(!$month && !$year){
