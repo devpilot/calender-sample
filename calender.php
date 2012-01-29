@@ -46,7 +46,7 @@
                 loadCal();
                 // Load next month
                 $('button#cal-next').click(function(){
-                    
+                    loadCal('next', calNum);
                 });
             });
         </script>

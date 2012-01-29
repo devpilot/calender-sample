@@ -4,6 +4,8 @@ include 'cale.func.php';
 
 if($_GET['action'] == 'loadcal'){
     
+    $month = '';
+    $year = '';
     if(isset($_GET['calnav'],$_GET['now'])){
     
     $date = explode('/', $_GET['now']);
@@ -18,7 +20,7 @@ if($_GET['action'] == 'loadcal'){
 }
 
     header('Content-type: application/json');
-    echo json_encode(get_calender());
+    echo json_encode(get_calender($month,$year));
 }
 
 ?>
