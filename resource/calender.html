@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Calender</title>
+
+        <script type="text/javascript" src="../script/jquery-1.7.1.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.close').click(function(){
+                    $('.mask').hide();
+                });
+                $('td.active').click(function(){
+                    $('.mask').show();
+                });
+                $('.info').click(function(){
+                    alert($(this).attr('foo'));
+                    return false;
+                });
+                $('.info').attr('foo', 1);
+            });
+        </script>
+        <link type="text/css" rel="stylesheet" href="../style/calender.css" />
+    </head>
+
+    <body>
+        <div class="mask">
+            <div class="dialog">
+                <div class="close"></div>
+                <h2>Form will go here</h2>
+            </div>
+        </div>
+        <div id="calender">
+            <div class="cal-menu">
+                <button>&laquo;</button>
+                <button>Today</button>
+                <button>&raquo;</button>
+                <span>January 2012</span>
+            </div>
+            <table>
+                <tr>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th style="color:red;">Sunday</th>
+                </tr>
+                <tr>
+                	<td class="blank">&nbsp;</td>
+                    <td class="active">
+                        <div class="date" title="Click to Add event">1</div>
+                        <div class="events">
+                        <div class="info">Here is a demo information</div>
+                        <div class="info"><strong>2:15pm</strong> demo information</div>
+                        <div class="info"><strong>12:00pm</strong> Here is a demo infor&hellip;</div>
+                        <div class="info">Here is a demo information</div>
+                        <div class="info">Here is a demo information</div>
+                        <div class="info">Here is a demo information</div>
+                        <div class="info">Here is a demo information</div>
+                        </div>
+                    </td>
+                    <td class="active">
+                        <div class="date">2</div>
+                        <div class="info"><strong>2:15pm</strong> demo information</div>
+                        <div class="info">Here is a demo information</div>
+                    </td>
+                    <td class="active">
+                        <div class="date">3</div>
+                    </td>
+                    <td class="active" id="today">
+                        <div class="date">4</div>
+                    </td>
+                    <td>
+                        <div class="date">5</div>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="blank">&nbsp;</td>
+                    <td class="blank">&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

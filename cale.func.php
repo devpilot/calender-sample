@@ -64,7 +64,7 @@ function get_calender($month ='', $year='') {
         if ($day_num == $curr['day'] && $month == $curr['month'] && $year == $curr['year']) {
             $table.= "<td id=today class=active data-value=$day_num/$month/$year><div class=date title='Click to Add event'>$day_num</div></td>";
         } else {
-            $table.= "<td class='active' data-value=$day_num/$month/$year><div class=date title='Click to Add event'>$day_num</div></td>";
+            $table.= "<td id=d$day_num class='active' data-value=$day_num/$month/$year><div class=date title='Click to Add event'>$day_num</div></td>";
         }
         $day_num++;
         $day_count++;

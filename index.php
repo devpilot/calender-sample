@@ -22,7 +22,7 @@
                 });
                 
                 $('.info').click(function(){
-                    alert($(this).attr('foo'));
+                    alert('haha');
                     return false;
                 });
                 
@@ -45,10 +45,23 @@
                     $('div#cal-struct').html(data.table);
                     calNum = data.numb;
                     if(!calToday){calToday = calNum;}
-                    initAct();
+                    loadEvent(calNum);
+                    
                 }, 'json');
             };
             
+            /**
+             * 
+             */
+            function loadEvent(date){
+                console.debug(this);
+                $.getJSON('ajax.php', {action: 'get-data', now:date}, function(data){
+                    $.each(data, function(key,value){
+                        $('td#'+key).append('<div class=info>'+value.title+'</div>');
+                    });
+                });
+                initAct();
+            };
             $(document).ready(function(){
                 // Load calender
                 loadCal();
